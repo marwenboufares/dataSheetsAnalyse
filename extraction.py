@@ -41,8 +41,7 @@ def generate_output_pdf(pdf_folder, output_file):
 
     elements = []
     for index, (pdf_file, description) in enumerate(description_list, start=1):
-        elements.append(Paragraph(f"{index}. ", title_style))  # Titre PDF en rouge
-        elements.append(Paragraph(pdf_file, styles['Normal']))  # Titre PDF
+        elements.append(Paragraph(f"{index}. {pdf_file} ", title_style))  # Titre PDF en rouge
         elements.append(Paragraph(description, styles['Normal']))  # Description
         elements.append(Paragraph("<br/><br/>", styles['Normal']))  # Retour à la ligne
         elements.append(Paragraph("<br/><br/>", styles['Normal']))  # Saut de ligne
@@ -56,6 +55,6 @@ def main(input_folder, output_file):
 
 # Utilisation
 if __name__ == "__main__":
-    input_folder = "C:\\Users\\mboufares\\Desktop\\datasheet"
+    input_folder = "C:\\Users\\mboufares\\Desktop\\datasheet\\dataSheetsAnalyse"
     output_file = "descriptionExtracted.pdf"
     main(input_folder, output_file)
