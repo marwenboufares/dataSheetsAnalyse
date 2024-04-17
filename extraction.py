@@ -70,6 +70,7 @@ def generate_output_pdf(pdf_folder, output_file):
 
     doc.build(elements)
 
+    messagebox.showinfo("Succès", "L'extraction a été terminée avec succès !")
 
 
 
